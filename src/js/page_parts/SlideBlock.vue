@@ -21,12 +21,11 @@ export default {
     return {
       slideIndex: 1,
       slides: [
-        this.domain + 'images/slide1.png',
-        this.domain + 'images/slide2.png',
-        this.domain + 'images/slide3.png',
+        (this.$config.useGitDomain ? this.$config.gitDomain : '/') + 'images/slide1.png',
+        (this.$config.useGitDomain ? this.$config.gitDomain : '/') + 'images/slide2.png',
+        (this.$config.useGitDomain ? this.$config.gitDomain : '/') + 'images/slide3.png',
       ],
       inProgress: false,
-      domain: this.$config.useGitDomain ? this.$config.gitDomain : '/',
     };
   },
   methods: {
