@@ -4,7 +4,12 @@ const path = require('path');
 require('laravel-mix-purgecss');
 require('laravel-mix-eslint');
 const textCollector = require('./src/textCollector');
+const config = require('./src/config');
 mix.setPublicPath('dist');
+
+if (config.useGitDomain) {
+  mix.setResourceRoot(config.gitDomain);
+}
 
 textCollector.init();
 mix.version();
