@@ -2,6 +2,7 @@
 <h3 style="color: red">
 Only for use on desktop screens (1000+ width)</h3>
 
+## [Preview (click me)](https://zangeore.github.io/landing-task/dist/index.html)
 
 ## Requirements
 
