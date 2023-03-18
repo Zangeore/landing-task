@@ -3,6 +3,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    commonjs: true,
   },
   extends: [
     'plugin:vue/essential',
@@ -19,6 +20,9 @@ module.exports = {
   rules: {
     'no-tabs': 0,
     'vue/multi-word-component-names': 0,
-    'max-len': ['warn', {code: 200}],
+    'max-len': ['warn', {code: 300}],
+    'quotes': 0,
+    'comma-dangle': 1,
+    'semi': 1,
   },
 };

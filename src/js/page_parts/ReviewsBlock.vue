@@ -95,9 +95,12 @@ export default {
   @extend .text-black-base;
   @extend .fs-16;
   @extend .lh-25;
+  word-wrap: anywhere;
+  @extend .p-right-20;
 }
 .review {
   @extend .m-bottom-60;
-  width: 1111px;
+  max-width: 1111px;
+  width: 100%;
 }
 </style>

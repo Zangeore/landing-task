@@ -1,8 +1,12 @@
 # Simple Landing Page
+<h3 style="color: red">
+Only for use on desktop screens (1000+ width)</h3>
+
 
 ## Requirements
 
 - [Node.js](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/) 
 - [Yarn](https://yarnpkg.com/) (optional)
 
 ## Quick start

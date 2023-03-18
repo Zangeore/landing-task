@@ -3,9 +3,10 @@ const httpServer = require('http-server');
 const path = require('path');
 require('laravel-mix-purgecss');
 require('laravel-mix-eslint');
-
+const textCollector = require('./src/textCollector');
 mix.setPublicPath('dist');
 
+textCollector.init();
 mix.version();
 mix.disableNotifications();
 mix.vue({
@@ -15,6 +16,9 @@ mix.vue({
 mix.eslint({
   files: [
     'src/js/**/*',
+  ],
+  exclude: [
+    'src/js/langs/*',
   ],
   fix: true,
 });
@@ -48,6 +52,7 @@ const server = httpServer.createServer({
   },
 });
 server.listen(8080);
+console.log('Server running on port 8080');
 
 if (!mix.inProduction()) {
   mix.browserSync({
