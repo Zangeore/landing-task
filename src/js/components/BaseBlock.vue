@@ -6,16 +6,16 @@
 
 <script>
 export default {
-  name: "BaseBlock"
-}
+  name: 'BaseBlock',
+};
 </script>
 
 <style scoped lang="scss">
   .base-block {
-    background-color: #FFFFFF;
-    display: flex;
-    justify-content: center;
+    @extend .bg-white-base;
+    @extend .display-flex;
+    @extend .jc-center;
+    @extend .p-21;
     width: 100%;
-    padding: 21px;
   }
 </style>

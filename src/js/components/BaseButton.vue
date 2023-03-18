@@ -6,20 +6,19 @@
 
 <script>
 export default {
-  name: "BaseButton"
-}
+  name: 'BaseButton',
+};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .base-button {
-  font-family: 'Museo Sans Cyrl 500', serif;
-  font-weight: 500;
-  background: #C70101;
+  @extend .bg-red-base;
+  @extend .msc-500;
+  @extend .text-white-base;;
   border-radius: 5px;
   border: none;
   outline: none;
   cursor: pointer;
-  color: #FFFFFF;
   text-transform: uppercase;
 }
 </style>

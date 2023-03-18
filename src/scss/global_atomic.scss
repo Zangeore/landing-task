@@ -1,0 +1,109 @@
+$sizes: [100, 300, 500, 700, 900];
+@each $size in $sizes {
+  @debug $size;
+  .msc-#{$size} {
+    font-family: 'Museo Sans Cyrl #{$size}', serif;
+  }
+}
+
+$basicAlignments: [left, right, center];
+@each $alignment in $basicAlignments {
+  .text-#{$alignment} {
+    text-align: $alignment;
+  }
+  .jc-#{$alignment} {
+    justify-content: $alignment;
+  }
+  .align-#{$alignment} {
+    align-items: $alignment;
+  }
+  .aself-#{$alignment} {
+    align-self: #{$alignment};
+  }
+  .acontent-#{$alignment} {
+    align-content: #{$alignment};
+  }
+}
+
+$justifyAlignments: [space-between, space-around, space-evenly];
+@each $alignment in $justifyAlignments {
+  .jc-#{$alignment} {
+    justify-content: $alignment;
+  }
+}
+
+$sides: [top, bottom, left, right];
+@for $i from 0 through 1000 {
+  .p-#{$i} {
+    padding: #{$i}px;
+  }
+  .m-#{$i} {
+    margin: #{$i}px;
+  }
+  @each $side in $sides {
+    .p-#{$side}-#{$i} {
+      padding-#{$side}: #{$i}px;
+    }
+    .m-#{$side}-#{$i} {
+      margin-#{$side}: #{$i}px;
+    }
+  }
+  .m-x-#{$i} {
+    margin-left: #{$i}px;
+    margin-right: #{$i}px;
+  }
+  .m-y-#{$i} {
+    margin-top: #{$i}px;
+    margin-bottom: #{$i}px;
+  }
+  .p-x-#{$i} {
+    padding-left: #{$i}px;
+    padding-right: #{$i}px;
+  }
+  .p-y-#{$i} {
+    padding-top: #{$i}px;
+    padding-bottom: #{$i}px;
+  }
+  .fs-#{$i} {
+    font-size: #{$i}px;
+  }
+  .lh-#{$i} {
+    line-height: #{$i}px;
+  }
+}
+
+$theme-colors: (
+        red-base: #C70101,
+        red-secondary: #FF0000,
+        grey-base: #F6F6F6,
+        grey-dark: #F2F2F2,
+        white-base: #FFFFFF,
+        black-base: #0D0D0D,
+        grey-font: #555555,
+        grey-border: #E8E8E8,
+);
+
+$colors: [red-base, grey-base, grey-dark, white-base, black-base, grey-font, grey-border, red-secondary];
+@each $color in $colors {
+  .bg-#{$color} {
+    background-color: map-get($theme-colors, $color);
+  }
+  .text-#{$color} {
+    color: map-get($theme-colors, $color);
+  }
+}
+
+$displayStyles: [flex, block];
+@each $style in $displayStyles {
+  .display-#{$style} {
+    display: #{$style};
+  }
+}
+
+$directions: [row, column];
+@each $direction in $directions {
+  .dir-#{$direction} {
+    flex-direction: #{$direction};
+  }
+}
+

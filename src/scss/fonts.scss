@@ -1,0 +1,19 @@
+$sizes: [100, [normal, italic], [300, 300]], [300, [normal, italic], [300, 300]], [500, [normal, italic], [normal, normal]], [700, [normal, italic], [normal, normal]], [900, [normal, italic], [bold, bold]];
+@each $size in $sizes {
+  $iterations: 1, 2;
+  $currentSize: nth($size, 1);
+  @each $iteration in $iterations {
+    $style: nth(nth($size, 2), $iteration);
+    $weight: nth(nth($size, 3), $iteration);
+    @font-face {
+      font-family: 'Museo Sans Cyrl #{$currentSize}';
+      src: url('../fonts/MuseoSansCyrl-#{$currentSize}#{$style}.eot');
+      src: local('MuseoSansCyrl-#{$currentSize}#{$style}'),
+      url('../fonts/MuseoSansCyrl-#{$currentSize}#{$style}.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/MuseoSansCyrl-#{$currentSize}#{$style}.woff') format('woff'),
+      url('../fonts/MuseoSansCyrl-#{$currentSize}#{$style}.ttf') format('truetype');
+      font-weight: $weight;
+      font-style: $style;
+    }
+  }
+}

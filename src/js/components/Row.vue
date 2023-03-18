@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  name: "Row"
-}
+  name: 'Row',
+};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .row {
-  display: flex;
-  flex-direction: row;
+  @extend .display-flex;
+  @extend .dir-row;
 }
 </style>

@@ -6,13 +6,13 @@
 
 <script>
 export default {
-  name: "Column"
-}
+  name: 'Column',
+};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .column {
-  display: flex;
-  flex-direction: column;
+  @extend .display-flex;
+  @extend .dir-column;
 }
 </style>
